@@ -8,6 +8,7 @@ export const ListUsers =()=>{
     const [users,setUsers]=useState([])
     const [loading,setLoading]=useState(true)
     useEffect(()=>{
+        document.title = "Djeja"
         axios.get('https://jsonplaceholder.typicode.com/users')
         .then((res)=>setUsers(res.data))
         .then(()=>setLoading(false))

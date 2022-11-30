@@ -10,6 +10,7 @@ export function UserProfile() {
     const [userP,setUserP]=useState({})
     const [loade,setLoade]=useState(true)
     useEffect(()=>{
+      document.title = "brahim"
         axios.get(`https://jsonplaceholder.typicode.com/users/${id}`)
         .then((res)=>setUserP(res.data))
         .then(()=>setLoade(false))
